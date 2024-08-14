@@ -11,4 +11,4 @@ Dans le fichier "integration_stommel", on défini une fonction pour le compte de
 ### 2
 Dans le fichier "diag_biffurcation_stommel", on résout les équations statiques du modèle de Stommel et on affiche le diagremme de biffurcation correspondant.
 ### 3
-Dans les fichiers "tau_moy_de_delta_V" et "tau_moy_de_sigma", on résout le système d'équation différentielles stochastique du modèle de Stommel pour plusieurs valeurs de $\Delta V$/$\sigma$ puis on trace les résultats obtenus.
+Dans les fichiers "tau_moy_de_delta_V" et "tau_moy_de_sigma", on résout le système d'équation différentielles stochastique du modèle de Stommel pour plusieurs valeurs de $\Delta V$ / $\sigma$ puis on trace les résultats obtenus.
