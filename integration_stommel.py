@@ -57,21 +57,6 @@ plt.ylabel(r'$\psi$', fontsize=16)
 plt.legend(loc = 'upper right', fontsize=12)
 plt.show()
 
-# Calcul et affichage de tau en fonction de sigma
-s_min = 0.03
-s_max = 0.045
-s_values = np.concatenate((np.linspace(s_min, 0.035, 8, endpoint=False), np.linspace(0.035, s_max, 5)))
-tau_values = np.array([count_pour_stommel(np.array([T-S for [T, S] in sd.itoint(Stommel, lambda u, t: np.array([[s, 0],[0, s]]), u0, tvalues, np.random)])) for s in s_values])
-plt.plot(s_values, tau_values, 'o', label = "période d'intégration ="+str(T)+", pas d'intégration = "+str(T/nb_T)+r", $\mu$ = "+str(mu)+ r", $\theta$ = "+str(theta)+", bruit constant "+r' $\sigma_0 = $'+str(sig_0)+r", $\epsilon_a$ = "+str(ep_a))
-
-s_fit, tau_fit, (a, b), var = fit(s_values, np.array(tau_values), "exponential sig")
-plt.plot(s_fit, tau_fit, label = "fit exponentiel, a = "+str(a)+", b = "+str(b)) 
-
-plt.xlabel(r'$\sigma$', fontsize=16)
-plt.ylabel(r'$\tau$', fontsize=16)
-plt.legend(loc = 'upper right', fontsize=13)
-plt.show()
-
 
 # Calcul et affichage de S en fonction de T
 result_int = sd.itoint(Stommel, lambda u, t: np.array([[0, 0],[0, sig]]), u0, tvalues, np.random)
