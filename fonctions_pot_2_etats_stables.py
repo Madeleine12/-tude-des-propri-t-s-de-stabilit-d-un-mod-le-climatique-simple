@@ -185,14 +185,6 @@ def fit(x_data, y_data, fit):
         y_fit = lineaire(abs_fit, a, b)
         return np.array(abs_fit), np.array(y_fit), (a, b), np.sqrt(np.diag(mat_cov))
 
-    # if fit == "linéaire":
-    #     def lineaire(x, a):
-    #         return a*x
-    #     a, pcov = curve_fit(lineaire, x_data, y_data, p0=(1.0), maxfev = 10000)
-    #     y_fit = lineaire(abs_fit, a)
-    #     return abs_fit, y_fit, a, np.sqrt(np.diag(pcov))
-
-
 def lissage(signal_brut,L):
     """
     Lisse un signal grâce à une moyenne glissante 
